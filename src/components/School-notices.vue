@@ -1,25 +1,25 @@
 <template>
   <div class="school-notices">
-    <div class="school-overlay1 border-blue-shadow">
-      <div>🏫 School Notices</div>
-    </div>
-    <div class="school-overlay2 border-blue-shadow">
-      <ul>
-        <li>Nothing to see here!</li>
-      </ul>
-      <div class="school-ellipse1"></div>
-    </div>
-    <div class="school-overlay3 border-blue">
-      <ul>
-        <li>Nothing to see here!</li>
-      </ul>
-    </div>
-    <div class="school-overlay4 border-blue">
-      <ul>
-        <li>Nothing to see here!</li>
-      </ul>
-      <div class="school-ellipse2"></div>
-    </div>
+<!--    <div class="school-overlay1 border-blue-shadow">-->
+<!--      <div>🏫 School Notices</div>-->
+<!--    </div>-->
+<!--    <div class="school-overlay2 border-blue-shadow">-->
+<!--      <ul>-->
+<!--        <li>Nothing to see here!</li>-->
+<!--      </ul>-->
+<!--      <div class="school-ellipse1"></div>-->
+<!--    </div>-->
+<!--    <div class="school-overlay3 border-blue">-->
+<!--      <ul>-->
+<!--        <li>Nothing to see here!</li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--    <div class="school-overlay4 border-blue">-->
+<!--      <ul>-->
+<!--        <li>Nothing to see here!</li>-->
+<!--      </ul>-->
+<!--      <div class="school-ellipse2"></div>-->
+<!--    </div>-->
 <!--    <div class='school-notices-grid'>-->
 <!--      <div class='school-notices-title'>School Notices</div>-->
 <!--      <div class='school-notices-data'>-->
@@ -64,13 +64,18 @@ export default {
 
 .school-notices {
   overflow: hidden;
-  grid-column: 12/22;
-  grid-row: 1/10;
+  grid-column: 20/31;
+  grid-row: 1/11;
   display:grid;
   grid-template-rows:repeat(10, 1fr);
   grid-template-columns:repeat(10, 1fr);
   color: white;
   font-family: "Poppins", sans-serif;
+  /*background-color: #3AB0FF;*/
+  background-color: #F9F2ED;
+  border: 2px solid #e0d8d8;
+  box-shadow:0.4vh 0.4vh 0.1vh #3AB0FF;
+
 }
 
 .school-notices li {

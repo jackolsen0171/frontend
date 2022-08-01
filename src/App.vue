@@ -1,39 +1,74 @@
 <template>
   <div id="app">
-    <div class="grid-container">
-      <fixtures class="bg"></fixtures>
-      <school-notices class="bg"></school-notices>
-      <department-notices class="bg"></department-notices>
-      <news class="bg"></news>
-      <weather class="bg"></weather>
-      <bus class="bg"></bus>
-      <lunch class="bg"></lunch>
-      <date-time-joke-rooms class="bg"></date-time-joke-rooms>
-<!--      <p>&copy; J.Olsen & Y.Gal 2021-Present</p>-->
+    <div class="bg-main">
+      <div class="ring-binders">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+      </div>
+      <div class="ring-binders2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+      </div>
+      <div class="ring-binders3">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <side-bar class="side-bar"></side-bar>
+      <div class="grid-container">
+        <dateTime></dateTime>
+<!--        <div class="page-divider"></div>-->
+
+<!--        <div class="img-container"><img src="@/assets/Mill_Hill_School_Coat_of_Arms_(2017).png"></div>-->
+        <department-notices></department-notices>
+        <weather></weather>
+        <news></news>
+<!--        <school-notices class="color-widget"></school-notices>-->
+        <!--      <p>&copy; J.Olsen & Y.Gal 2021-Present</p>-->
+      </div>
     </div>
   </div>
 </template>
 <script>
-import Bus from './components/Bus.vue'
-import SchoolNotices from "@/components/School-notices";
+// import Bus from './components/Bus.vue'
 import news from "@/components/News";
 import departmentNotices from "@/components/Department-notices";
 import weather from "@/components/Weather";
-import lunch from "@/components/Lunch";
-import dateTimeJokeRooms from "@/components/Date,time,quote,room-uses";
-import fixtures from "@/components/Fixtures";
+import sideBar from "@/components/sideBar";
+import dateTime from "@/components/Date,time,quote"
+// import schoolNotices from "@/components/School-notices"
+
 
 export default {
   name: 'App',
   components: {
-    Bus,
-    fixtures,
+    sideBar,
+    // Bus,
     news,
-    SchoolNotices,
     departmentNotices,
     weather,
-    lunch,
-    dateTimeJokeRooms,
+    dateTime,
+    // schoolNotices,
+
 
   }
 }
@@ -68,64 +103,152 @@ export default {
   */
 }
 
-.grid-container::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width:100%;
-  height: 100%;
-  background: linear-gradient( to bottom,#af0808, #9a609a);
-  opacity: 0.5;
-  clip-path: circle(30% at right 70%);
-
+.bg-main{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*background-color: #272748;*/
+  background-color: #F9F2ED;
+  width: 100vw;
+  height: 100vh;
 }
 
-.grid-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#e91e63,#2196f3 );
-  clip-path: circle(20% at 10% 100%);
-  /*clip-path: circle(20% at 50% 0%);*/
-  opacity: 0.5;
+.bg-main::before{
+  /*content: '';*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  /*box-shadow: inset 0 0 4vh rgba(255, 255, 255, 0.5);*/
+  /*filter: blur(3vh);*/
+  /*background: linear-gradient( to bottom,#af0808, #9a609a);*/
+  /*opacity: 0.5;*/
+  /*clip-path: circle(30% at right 70%);*/
 }
+
+
+
+.side-bar{
+  height: 95vh;
+  width: 25vw;
+  position: relative;
+  left: 0.75vw;
+  border-radius: 2vh;
+  z-index:1;
+}
+
+
 
 .grid-container {
+  width: 70vw;
+  height: 95vh;
   display: grid;
-  /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
-  /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
   grid-template-columns: repeat(30, 1fr);
   grid-template-rows: repeat(30, 1fr);
   gap: 2.5vh;
   padding: 3vh;
+  border-radius: 2vh;
+  background: white;
+  border: 2px solid #e0d8d8;
+  overflow: hidden;
+
+}
+
+
+
+
+.widget {
+  z-index: 1;
+  border-radius: 2vh;
+  backdrop-filter: blur(0.5vh);
+  border: 2px solid #e0d8d8;
+  background-color: #F9F2ED;
+
+
+}
+
+.ring-binders{
+  width: 5vw;
+  height: 89vh;
+  position: absolute;
+  top: 6vh;
+  left: 26vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ring-binders > div{
+  border: 0.2vh solid black;
+  width: 4.5vw;
+  height: 1.5vh;
+  border-radius: 50%;
+  border-bottom: transparent;
+  opacity: 0.7;
+  filter: blur(0.1vh);
+
+
+}
+
+.ring-binders2{
+  width: 5vw;
+  height: 89vh;
+  position: absolute;
+  top: 6.5vh;
+  left: 26vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ring-binders2 > div{
+  border: 0.2vh solid grey;
+  width: 0.5vw;
+  height: 1vh;
+  border-radius: 50%;
+  opacity: 0.7;
+  filter: blur(0.1vh);
+
+
+}
+
+.ring-binders3{
+  width: 5vw;
+  height: 89vh;
+  position: absolute;
+  top: 6.5vh;
+  left: 30vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ring-binders3 > div{
+  border: 0.2vh solid grey;
+  width: 0.5vw;
+  height: 1vh;
+  border-radius: 50%;
+  opacity: 0.7;
+  filter: blur(0.1vh);
+}
+
+.page-divider{
+  /*width: 3vw;*/
+  /*height: 5vh;*/
+  width: 70vw;
   height: 100vh;
-  background-color: #272748;
-  /*background-color: #e70404;*/
+  grid-row: 17/31;
+  grid-column: 1/31;
+  position: relative;
+  top: 1.65vh;
+  right: 1.75vw;
+  border-radius:7vh;
+  /*box-shadow: 0 0 0.1vh 0.6vh #FFB562, 0 0 0.1vh 1.2vh #3AB0FF;*/
 }
 
-.grid-container > div {
-  z-index: 1;
-  background: rgba(206, 182, 182, 0.1);
-  box-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.5);
-  border-radius: 2vh;
-  border-top: 0.2vh solid rgba(255, 255, 255, 0.5);
-  border-left: 0.2vh solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(0.5vh);
-}
 
-.bg {
-  z-index: 1;
-  background: rgba(206, 182, 182, 0.1);
-  box-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.5);
-  border-radius: 2vh;
-  border-top: 0.2vh solid rgba(255, 255, 255, 0.5);
-  border-left: 0.2vh solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(0.5vh);
-
-
-}
 </style>

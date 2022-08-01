@@ -1,75 +1,75 @@
 <template>
   <div class="weather">
-    <div class="weather-overlay1 border-blue-shadow">
-      <div class="weather-location">Mill Hill Weather
-      </div>
-      <div class="w-temperature">
-        <p><span style="position: relative;top: 1vh">{{ polledData.current.temp }}</span><sup
-            class="temp-blue" style='font-size: 2.5vh;position: relative;bottom: 1vh;font-weight: 600'>°C</sup></p>
-      </div>
-      <div class="feels-like-text">
-        <div>Feels Like:</div>
-      </div>
-      <div class="feels-like-value">{{ polledData.current.feelsLike }}<span class = 'temp-blue'>°</span>C</div>
-      <div class="w-wind-icon">
-        <!--        <img src='../assets/wind1.png'>-->
-        <img src='../assets/wind2.png'>
-      </div>
+<!--    <div class="weather-overlay1">-->
+<!--      <div class="weather-location">Mill Hill Weather-->
+<!--      </div>-->
+<!--      <div class="w-temperature">-->
+<!--        <p><span style="position: relative;top: 1vh">{{ polledData.current.temp }}</span><sup-->
+<!--            class="temp-blue" style='font-size: 2.5vh;position: relative;bottom: 1vh;font-weight: 600'>°C</sup></p>-->
+<!--      </div>-->
+<!--      <div class="feels-like-text">-->
+<!--        <div>Feels Like:</div>-->
+<!--      </div>-->
+<!--      <div class="feels-like-value">{{ polledData.current.feelsLike }}<span class = 'temp-blue'>°</span>C</div>-->
+<!--      <div class="w-wind-icon">-->
+<!--        &lt;!&ndash;        <img src='../assets/wind1.png'>&ndash;&gt;-->
+<!--        <img src='../assets/wind2.png'>-->
+<!--      </div>-->
 <!--      <div class="wind-speed">-->
 <!--        <p><span style="font-weight: 600;">{{ polledData.wind.kmh }}</span><span> Km/Hr</span></p>-->
 <!--      </div>-->
-      <div class="wind-speed">
-          <p>Wind Speed:</p>
-      </div>
-      <div class="wind-speed-value">{{ polledData.wind.kmh }}<span style="font-size: 1.5vh"> Km<span class="temp-blue">/</span>Hr</span></div>
+<!--      <div class="wind-speed">-->
+<!--          <p>Wind Speed:</p>-->
+<!--      </div>-->
+<!--      <div class="wind-speed-value">{{ polledData.wind.kmh }}<span style="font-size: 1.5vh"> Km<span class="temp-blue">/</span>Hr</span></div>-->
 
-    </div>
-    <div class="weather-overlay2 border-blue-shadow">
-      <div class="sunrise">
-        <img src='../assets/iconmonstr-weather-107-240.png'>
-        <h4>{{ polledData.sunrise }}</h4>
-      </div>
-      <div class="sunset">
-        <img src='../assets/iconmonstr-weather-109-240.png'>
-        <h4>{{ polledData.sunset }}</h4>
-      </div>
-    </div>
-    <div class="weather-overlay3 border-blue">
-      <!--      <img src='../assets/wave-haikei.png'>-->
-      <div class="weather-data-container">
-        <div class="w-data1">
-          <p>{{ polledData.forecast[0].time }}</p>
-          <h1>{{ polledData.forecast[0].temp }}°C</h1>
-          <img :src="polledData.forecast[0].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[0].desc }}</h5>
+<!--    </div>-->
+<!--    <div class="weather-overlay2 border-blue-shadow">-->
+<!--      <div class="sunrise">-->
+<!--        <img src='../assets/iconmonstr-weather-107-240.png'>-->
+<!--        <h4>{{ polledData.sunrise }}</h4>-->
+<!--      </div>-->
+<!--      <div class="sunset">-->
+<!--        <img src='../assets/iconmonstr-weather-109-240.png'>-->
+<!--        <h4>{{ polledData.sunset }}</h4>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="weather-overlay3 border-blue">-->
+<!--      &lt;!&ndash;      <img src='../assets/wave-haikei.png'>&ndash;&gt;-->
+<!--      <div class="weather-data-container">-->
+<!--        <div class="w-data1">-->
+<!--          <p>{{ polledData.forecast[0].time }}</p>-->
+<!--          <h1>{{ polledData.forecast[0].temp }}°C</h1>-->
+<!--          <img :src="polledData.forecast[0].icon" class="weather-data-Icon">-->
+<!--          <h5 class="weather-data-desc">{{ polledData.forecast[0].desc }}</h5>-->
 
-        </div>
-        <div class="w-data2">
-          <p>{{ polledData.forecast[1].time }}</p>
-          <h1>{{ polledData.forecast[1].temp }}°C</h1>
-          <img :src="polledData.forecast[1].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[1].desc }}</h5>
-        </div>
-        <div class="w-data3">
-          <p>{{ polledData.forecast[2].time }}</p>
-          <h1>{{ polledData.forecast[2].temp }}°C</h1>
-          <img :src="polledData.forecast[2].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[2].desc }}</h5>
-        </div>
-        <div class="w-data4">
-          <p>{{ polledData.forecast[3].time }}</p>
-          <h1>{{ polledData.forecast[3].temp }}°C</h1>
-          <img :src="polledData.forecast[3].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[3].desc }}</h5>
-        </div>
-        <div class="w-data5">
-          <p>{{ polledData.forecast[4].time }}</p>
-          <h1>{{ polledData.forecast[4].temp }}°C</h1>
-          <img :src="polledData.forecast[4].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>
-        </div>
-      </div>
-    </div>
+<!--        </div>-->
+<!--        <div class="w-data2">-->
+<!--          <p>{{ polledData.forecast[1].time }}</p>-->
+<!--          <h1>{{ polledData.forecast[1].temp }}°C</h1>-->
+<!--          <img :src="polledData.forecast[1].icon" class="weather-data-Icon">-->
+<!--          <h5 class="weather-data-desc">{{ polledData.forecast[1].desc }}</h5>-->
+<!--        </div>-->
+<!--        <div class="w-data3">-->
+<!--          <p>{{ polledData.forecast[2].time }}</p>-->
+<!--          <h1>{{ polledData.forecast[2].temp }}°C</h1>-->
+<!--          <img :src="polledData.forecast[2].icon" class="weather-data-Icon">-->
+<!--          <h5 class="weather-data-desc">{{ polledData.forecast[2].desc }}</h5>-->
+<!--        </div>-->
+<!--        <div class="w-data4">-->
+<!--          <p>{{ polledData.forecast[3].time }}</p>-->
+<!--          <h1>{{ polledData.forecast[3].temp }}°C</h1>-->
+<!--          <img :src="polledData.forecast[3].icon" class="weather-data-Icon">-->
+<!--          <h5 class="weather-data-desc">{{ polledData.forecast[3].desc }}</h5>-->
+<!--        </div>-->
+<!--        <div class="w-data5">-->
+<!--          <p>{{ polledData.forecast[4].time }}</p>-->
+<!--          <h1>{{ polledData.forecast[4].temp }}°C</h1>-->
+<!--          <img :src="polledData.forecast[4].icon" class="weather-data-Icon">-->
+<!--          <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 
 </template>
@@ -188,28 +188,26 @@ export default {
 }
 
 .weather {
-  grid-column: 1/12;
-  grid-row: 1/17;
+  grid-column: 15/29;
+  grid-row: 18/24;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
-  color: white;
-  background: #2a2828;
-
+  /*background-color: #F9F2ED;*/
+  /*border: 2px solid #e0d8d8;*/
 }
 
 .weather-overlay1 {
-  width: 65%;
-  height: 30%;
-  background: #2a2828;
+  width: 35%;
+  height: 100%;
   /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;*/
-
-
-  border-bottom-left-radius: 2vh;
+  border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr);
+  /*box-shadow: 0 0 0.1vh 0.7vh #FFB562, 0 0 0.1vh 1.5vh #3AB0FF;*/
+
 }
 
 .weather-overlay2 {

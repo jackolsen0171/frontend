@@ -263,6 +263,7 @@ export default {
   height: 10vh;
   position: relative;
   right: 2.5vw;
+
 }
 .mins{
   position: relative;
