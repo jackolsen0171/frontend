@@ -1,39 +1,41 @@
 <template>
   <div class='department-notices'>
-<!--    <div class="department-overlay1">-->
-<!--      <h2>💻 Department Notices</h2>-->
-<!--    </div>-->
-<!--    <div class="department-overlay2">-->
-<!--      <ul>-->
-<!--        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>-->
-<!--      </ul>-->
+<!--    <img class='notice1' src="@/assets/sticky-note.png" alt="loading....">-->
+<!--    <img class='notice2' src="@/assets/sticky-note.png" alt="loading....">-->
+    <!--    <img src="@/assets/Mill_Hill_School_Coat_of_Arms_(2017).png">-->
 
+
+
+<!--    <div class="triangles">-->
+<!--      <div class="triangle1"></div>-->
+<!--      <div class="triangle2"></div>-->
+<!--      <div class="triangle3"></div>-->
 <!--    </div>-->
-<!--    <div class="department-overlay3">-->
-<!--      <ul>-->
-<!--        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>-->
-<!--      </ul>-->
-<!--      <div class="department-ellipse2"></div>-->
-<!--    </div>-->
-<!--    <div class="department-overlay4">-->
-<!--      <div class="department-name">-->
-<!--        <h2>Computer Science</h2>-->
+<!--    <div class="teacher-rotation">-->
+<!--      <div class="title">Department Notices</div>-->
+<!--      <div class="teachers">-->
+<!--        <div>Mr Olsen</div>-->
+<!--        <div>Mr Gal</div>-->
+<!--        <p>Dr Mookle</p>-->
 <!--      </div>-->
-
-<!--      <ul>-->
-<!--        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>-->
+<!--    </div>-->
+<!--    <div class="notices-container">-->
+<!--      <div class="department-notice1">-->
+<!--        <ion-icon name="alert-circle-outline"></ion-icon>️&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ligula sit amet enim aliquam feugiat. Integer pulvinar ipsum eu.-->
+<!--      </div>-->
+<!--      <div class="department-notice2">-->
+<!--        <ion-icon name="alert-circle-outline"></ion-icon>️&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ligula sit amet enim aliquam feugiat. Integer pulvinar ipsum eu.-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="main-notice-container">-->
+<!--      <div class="main-notice-title"><ion-icon name="alert-outline"></ion-icon>&nbsp;Room Change</div>-->
+<!--      <ul class="main-notice">-->
+<!--        <li>bla bla bla i cant think of any thing to say to act as filler text. lorem ipsum.</li>-->
 <!--      </ul>-->
-<!--      <div class="department-ellipse1"></div>-->
-<!--    </div>-->
 
+<!--    </div>-->
+<!--    <img class="cork-board" src="@/assets/cork-board.jpeg">-->
 
-<!--    <div id='title' class='period-title'>-->
-<!--      Period:-->
-<!--    </div>-->
-<!--    <div class='period-number' :class="polledData.period.length>1?'smaller':'regular'">-->
-<!--      {{ polledData.period }}-->
-<!--    </div>-->
-<!--    <div class='period-length'>{{ polledData.range }}</div>-->
   </div>
 
 </template>
@@ -107,180 +109,182 @@ export default {
 
 <style scoped>
 .department-notices {
-  grid-column: 1/6;
-  grid-row: 17/31;
-  width: 100%;
-  height: 100%;
-  display:grid;
-  grid-template-rows:repeat(20, 1fr);
-  grid-template-columns:repeat(20, 1fr);
-  overflow: hidden;
-
+  grid-column: 2/29;
+  grid-row: 15/23;
+  background-color: #F9F2ED;
+  border: 2px solid #e0d8d8;
 }
 
-.department-notices li{
-  color: black;
-  font-weight: 600;
-  font-size: 1.5vh;
-  padding-top: 1vh;
-  padding-left: 0.2vw;
 
+.notices > div {
+  width:25vw;
+  height: 22vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: #F9F2ED;
+  border: 2px solid #e0d8d8;
 }
 
-.department-overlay2 li {
-  max-width:15vw;
+.notice1{
+  transform: rotate(-5.75deg);
+}
+
+.notice2{
   position: relative;
-  left: 1.2vw;
-}
-
-.department-overlay3 li {
-  position: relative;
-  left: 20.5vw;
-  max-width:6vw;
-
-}
-
-.department-overlay4 li {
-  position: relative;
-  left: 18.5vw;
-  height: 10vh;
-  max-width: 7vw;
-  bottom: 4vh;
-
-}
-
-.department-overlay1{
-  grid-row: 14/21;
-  grid-column: 1/9;
-  position: relative;
-  right: 1vw;
-  background: linear-gradient( to bottom right, rgba(237, 252, 7), rgba(255, 107, 17));
-  z-index:1;
-  border-top-right-radius: 2vh;
-  border-top-left-radius: 2vh;
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #fff;
-
-}
-
-.department-overlay1 h2{
-  position: relative;
-  padding-top: 0.2vh;
-  left: 1.3vw;
-  font-size: 2.7vh;
+  left: 17.5vw;
+  bottom: 29vh;
+  transform: rotate(-5.75deg);
 }
 
 
-
-.department-overlay2{
-  grid-row: 5/21;
-  grid-column: 1/11;
-  border-top-right-radius: 2vh;
-  background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
-}
-
-.department-ellipse1{
-  width: 5vw;
-  position: relative;
-  right: 3vw;
-  bottom: 13vh;
-  height: 7vh;
-  border-radius: 50%;
-  background: linear-gradient( to bottom right, rgba(237, 252, 7), rgba(255, 107, 17));
-
-}
-
-
-.department-ellipse2{
-  width: 5vw;
-  height: 8vh;
-  border-radius: 50%;
-  background: linear-gradient( to bottom right, rgba(237, 252, 7), rgba(255, 107, 17));
-  position: relative;
-  left: 24vw;
-  top: 6vh;
+/*.teacher-rotation{*/
+/*  !*border: 2px solid #e0d8d8;*!*/
+/*  width: 25vw;*/
+/*  height: 20vh;*/
+/*  !*background-color: #F9F2ED;*!*/
+/*  !*background-color: white;*!*/
+/*  !*z-index: 1;*!*/
+/*  border-radius: 2vh;*/
+/*  position: relative;*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(10,1fr);*/
+/*  grid-template-rows: repeat(10,1fr);*/
+/*  !*left: -1vw;*!*/
+/*}*/
+/*.title{*/
+/*  font-family: "Poppins", sans-serif;*/
+/*  font-size: 4.5vh;*/
+/*  font-weight: 600;*/
+/*  grid-column: 1/11;*/
+/*  grid-row: 1/2;*/
 
 
-}
+/*}*/
 
-
-
-.department-overlay3{
-  grid-row: 1/21;
-  grid-column: 5/21;
-  background: #2a2828;
-  border-top-right-radius: 2vh;
-  z-index: -1;
-
-
-}
-.department-overlay4{
-  grid-row: 1/19;
-  position: relative;
-  left: 0.2vw;
-  border-radius: 2vh;
-  grid-column: 1/16;
-  z-index:-1;
-  background: linear-gradient(to bottom right, #c78cea, #d86ce5);
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #fff;
-  overflow: hidden;
-
-
-}
-
-.department-name{
-  color: black;
-  position: relative;
-  left: 3vw;
-  max-width:15vw;
-}
-
-
-.department-name h2{
-  font-weight: bolder;
-  padding-left: 0.5vw;
-  font-size: 2.5vh;
+/*.teachers{*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  justify-content: space-between;*/
+/*  font-family: "Poppins", sans-serif;*/
+/*  font-size: 2.3vh;*/
+/*  grid-column: 1/11;*/
+/*  grid-row: 3/4;*/
+/*  font-weight: 600;*/
+/*}*/
 
 
 
-}
+/*.teachers p::after{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 11.5vh;*/
+/*  left: 19vw;*/
+/*  width: 4vw;*/
+/*  height: 0.25vh;*/
+/*  background: #3AB0FF;*/
+/*}*/
+
+/*.teachers div{*/
+/*  opacity: 0.5;*/
+/*}*/
+
+
+/*.main-notice-title ion-icon{*/
+/*  color: red;*/
+/*  font-size: 5vh;*/
+/*  position: absolute;*/
+/*  top: 1.5vh;*/
+/*  left: 0.5vw;*/
+
+/*}*/
+
+/*.notices-container{*/
+/*  grid-row: 2/11;*/
+/*  width: 33vw;*/
+/*  font-family: "Poppins", sans-serif;*/
+/*  position: relative;*/
+/*  bottom: 6vh;*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  justify-content: space-between;*/
+/*  font-size: 2vh;*/
+/*  !*border: 2px solid red;*!*/
+/*}*/
+
+
+/*.notices-container div{*/
+/*  width: 15vw;*/
+/*}*/
 
 
 
+/*!*.triangles{*!*/
+/*!*  opacity: 0.7;*!*/
+/*!*}*!*/
+
+/*!*.triangle1 {*!*/
+/*!*  width: 0;*!*/
+/*!*  height: 0;*!*/
+/*!*  border-left: 0.75vh solid transparent;*!*/
+/*!*  border-right: 0.75vh solid transparent;*!*/
+/*!*  border-bottom: 1.5vh solid #3AB0FF;*!*/
+/*!*  position: absolute;*!*/
+/*!*  left:33vw;*!*/
+/*!*  top: 54vh;*!*/
+/*!*  transform: rotate(-45deg);*!*/
+/*!*}*!*/
+
+/*!*.triangle2 {*!*/
+/*!*  width: 0;*!*/
+/*!*  height: 0;*!*/
+/*!*  border-left: 0.75vh solid transparent;*!*/
+/*!*  border-right: 0.75vh solid transparent;*!*/
+/*!*  border-bottom: 1.5vh solid #FFB562;*!*/
+/*!*  position: absolute;*!*/
+/*!*  left:1vw;*!*/
+/*!*  top: 54vh;*!*/
+/*!*  transform: rotate(-346deg);*!*/
+/*!*}*!*/
 
 
+/*!*.triangle3 {*!*/
+/*!*  width: 0;*!*/
+/*!*  height: 0;*!*/
+/*!*  border-left: 0.75vh solid transparent;*!*/
+/*!*  border-right: 0.75vh solid transparent;*!*/
+/*!*  border-bottom: 1.5vh solid #F87474;*!*/
+/*!*  position: absolute;*!*/
+/*!*  left:32vw;*!*/
+/*!*  top: 4vh;*!*/
+/*!*  transform: rotate(70deg);*!*/
 
 
+/*!*}*!*/
 
-.period-title {
-  font-size: 3.5vh;
-  text-align: center;
-  text-decoration: underline;
-  font-family: "Kanit", sans-serif;
-}
+/*.cork-board{*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  position: absolute;*/
+/*  border-radius: 2vh;*/
+/*  opacity: 0.8;*/
+/*  filter: blur(0.1vh);*/
+/*}*/
 
-.period-number {
-  text-align: center;
-  position: relative;
+/*.sticky-note{*/
+/*  z-index: 1;*/
+/*  position: absolute;*/
+/*  top: 4vh;*/
+/*  left: 0.5vw;*/
+/*  transform: rotate(-5.9deg);*/
+/*}*/
 
+/*.sticky-note2{*/
+/*  z-index: 1;*/
+/*  position: absolute;*/
+/*  top: 4vh;*/
+/*  left: 17.5vw;*/
+/*  transform: rotate(-5.9deg);*/
+/*}*/
 
-}
-
-.regular {
-  font-size: 7vh;
-}
-
-.smaller {
-  font-size: 5vh;
-}
-
-.period-length {
-
-  position:relative ;
-  top: 2vh;
-  font-size: 2vh;
-  opacity: 0.7;
-  text-align: center;
-}
 
 </style>
