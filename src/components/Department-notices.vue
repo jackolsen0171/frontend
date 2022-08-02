@@ -109,7 +109,7 @@ export default {
 
 <style scoped>
 .department-notices {
-  grid-column: 2/29;
+  grid-column: 2/31;
   grid-row: 15/23;
   background-color: #F9F2ED;
   border: 2px solid #e0d8d8;
