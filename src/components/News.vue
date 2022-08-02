@@ -63,7 +63,7 @@ export default {
 
 
 .news {
-  grid-column: 14/29;
+  grid-column: 14/31;
   grid-row: 1/14;
   overflow: hidden;
   color: black;
@@ -106,8 +106,8 @@ export default {
   border-left: 1.75vh solid transparent;
   border-right: 1.75vh solid transparent;
   border-bottom: 2.5vh solid #3AB0FF;
-  position: relative;
-  left: 10vw;
+  grid-row: 1/2;
+  grid-column: 15/16;
   transform: rotate(70deg);
   filter: blur(0.1vh);
 }
@@ -118,9 +118,11 @@ export default {
   border-left: 1vh solid transparent;
   border-right: 1vh solid transparent;
   border-bottom: 2vh solid #FFB562;
-  position: relative;
-  right: 20vw;
-  top: 30vh;
+  /*position: relative;*/
+  /*right: 20vw;*/
+  /*top: 32vh;*/
+  grid-row: 15/16;
+  grid-column: 1/2;
   transform: rotate(220deg);
   filter: blur(0.1vh);
 }
@@ -131,9 +133,8 @@ export default {
   border-left: 0.75vh solid transparent;
   border-right: 0.75vh solid transparent;
   border-bottom: 2vh solid #F87474;
-  position: relative;
-  top: 30vh;
-  left: 7vw;
+  grid-row: 14/15;
+  grid-column: 15/16;
   transform: rotate(30deg);
   filter: blur(0.1vh);
 }

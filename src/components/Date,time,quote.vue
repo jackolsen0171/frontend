@@ -4,7 +4,7 @@
       <div>{{ localHr }}<span style="color: #F87474">:</span>{{ mins }}<span style="color: #F87474" >:</span>{{ secs }}</div>
     </div>
     <div class="date-main">
-      <div>{{ day }}<span style="color: #F87474">/</span>{{ date }}<span style="color: #F87474">/</span>{{ month }}</div>
+      <div>{{ day }} {{ date }} {{ month }}</div>
     </div>
     <div class="img-container"></div>
 <!--    <img src="@/assets/Mill_Hill_School_Coat_of_Arms_(2017).png">-->
@@ -190,7 +190,7 @@ export default {
 }
 
 .motto{
-  font-size: 3.2vh;
+  font-size: 2.8vh;
   position: relative;
   left: 5vw;
   bottom: 3vh;
@@ -199,7 +199,7 @@ export default {
 }
 .motto-translation{
   font-weight: 600;
-  font-size: 3.3vh;
+  font-size: 3vh;
   display: block;
   text-align: center;
   position: relative;
