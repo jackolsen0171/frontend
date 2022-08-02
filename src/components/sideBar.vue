@@ -5,17 +5,17 @@
     <div class="desc">information dashboard</div>
     <hr style="border: 1px solid rgba(0,0,0,0.6);position: relative;left: 1.5vw;bottom:1.5vh;width: 20.5vw">
     <div class="side-bar-period">
-      <p style="width: 10vw">Period 4<span>12:10 → 12:50</span></p>
+      <p style="width: 10vw">Period {{periodInfo.period}}<span>{{ periodInfo.lower }} → {{ periodInfo.upper }}</span></p>
       <div class="period-squares">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div style="background-color: #F87474;"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div :class="periodInfo.block==1 ? 'active-period' : 'inactive-period'"></div>
+        <div :class="periodInfo.block==2 ? 'active-period' : 'inactive-period'"></div>
+        <div :class="periodInfo.block==3 ? 'active-period' : 'inactive-period'"></div>
+        <div :class="periodInfo.block==4 ? 'active-period' : 'inactive-period'"></div>
+        <div :class="periodInfo.block==5 ? 'active-period' : 'inactive-period'"></div>
+        <div :class="periodInfo.block==6 ? 'active-period' : 'inactive-period'"></div>
+        <div :class="periodInfo.block==7 ? 'active-period' : 'inactive-period'"></div>
+        <div :class="periodInfo.block==8 ? 'active-period' : 'inactive-period'"></div>
+        <div :class="periodInfo.block==9 ? 'active-period' : 'inactive-period'"></div>
       </div>
 
     </div>
@@ -39,7 +39,8 @@
 <script>
 // import quote from "@/components/Quote";
 
-import axios from "axios";
+// import axios from "axios";
+import dayjs from "dayjs";
 
 export default {
   name: "Date-time",
@@ -62,31 +63,51 @@ export default {
       month: "month...",
       quote: {
         text: 'Text...',
-      }
+      },
+      periodInfo: {period: '1', lower: '09:00', upper: '09:40', block:1}
+
     }
   },
   methods:
       {
+        findPeriod(time) {
+          if (time >= "0900" && time < "0940") {
+            return {period: '1', lower: '09:00', upper: '09:40', block: 1}
+          } else if (time >= "0940" && time < "1020") {
+            return {period: '2', lower: '09:40', upper: '10:20', block: 2}
+          } else if (time >= "1020" && time < "1050") {
+            return {period: 'Break', lower: '10:20', upper: '10:50', block: 0}
+          } else if (time >= "1050" && time < "1130") {
+            return {period: '3', lower: '10:50', upper: '11:30', block: 3}
+          } else if (time >= "1130" && time < "1210") {
+            return {period: '4', lower: '11:30', upper: '12:10', block: 4}
+          } else if (time >= "1210" && time < "1250") {
+            return {period: '5', lower: '12:10', upper: '12:50', block: 5}
+          } else if (time >= "1250" && time < "1340") {
+            return {period: 'Lunch', lower: '12:50', upper: '13:40', block: 0}
+          }else if (time >= "1340" && time < "1420") {
+            return {period: '6', lower: '13:40', upper: '14:20', block: 6}
+          }else if (time >= "1420" && time < "1500") {
+            return {period: '7', lower: '14:20', upper: '15:00', block: 7}
+          }else if (time >= "1500" && time < "1505") {
+            return {period: 'Gap', lower: '15:00', upper: '15:05', block: 0}
+          }else if (time >= "1505" && time < "1545") {
+            return {period: '8', lower: '15:05', upper: '15:45', block: 8}
+          }else if (time >= "1545" && time < "1550") {
+            return {period: 'Gap', lower: '15:45', upper: '15:50', block: 0}
+          }else if (time >= "1550" && time < "1630") {
+            return {period: '9', lower: '15:50', upper: '16:30', block: 9}
+          } else {
+            return {period: 'N/a', lower: '16:30', upper: '09:00', block: 0}
+          }
+        },
         pollData() {
           this.polling = setInterval(() => {
-            const date = new Date()
-            this.nycHr = date.toLocaleTimeString('en-GB', {timeZone: 'America/New_York'}).split(':')[0].padStart(2, '0')
-            this.sydHr = date.toLocaleTimeString('en-GB', {timeZone: 'Australia/Sydney'}).split(':')[0].padStart(2, '0')
-            this.tokHr = date.toLocaleTimeString('en-GB', {timeZone: 'Asia/Tokyo'}).split(':')[0].padStart(2, '0')
-            //hours
-            this.localHr = date.getHours().toString().padStart(2, '0')
-            this.mins = date.getMinutes().toString().padStart(2, '0')
-            this.secs = date.getSeconds().toString().padStart(2, '0')
-
-            this.day = this.days[date.getDay()]
-            this.date = date.getDate()
-            this.month = this.months[date.getMonth()]
+            this.periodInfo = this.findPeriod(dayjs().format('HHmm'))
           }, 1000)
         },
         pullData() {
-          axios
-              .get('https://fathomless-crag-41517.herokuapp.com/quotes')
-              .then(response => (this.quote = response.data[0].text))
+          this.periodInfo = this.findPeriod(dayjs().format('HHmm'))
         }
       },
   mounted() {
@@ -129,7 +150,13 @@ export default {
 
 }
 
+.active-period {
+  background-color: #F87474;
+}
 
+.inactive-period{
+  background-color: #F9F2ED;
+}
 
 .department-name{
   font-family: "Poppins", sans-serif;
@@ -183,7 +210,6 @@ export default {
 }
 
 .period-squares > div{
-  background-color: #F9F2ED;
   border: 2px solid #e0d8d8;
   border-radius: 0.5vh;
   width: 2vw;
