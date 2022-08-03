@@ -1,8 +1,8 @@
 <template>
   <div class="weather">
       <div class="title">Mill Hill Weather&nbsp;<ion-icon style="position: relative;top: 0.5vh" name="cloudy-night-outline"></ion-icon></div>
-      <div class="current-temp">26°C</div>
-      <div class="current-desc">Mostly Cloudy</div>
+      <div class="current-temp">{{ polledData.current.temp }}°C</div>
+      <div class="current-desc">{{ polledData.current.desc }}</div>
     <div class="line-container">
       <div class="line"></div>
     </div>
@@ -115,64 +115,79 @@ export default {
       tempThresh: 3,
       polling: null,
       polledData: {
-        "hour": "12/24",
+        "hour": "22/24",
         "wind": {
-          "ms": 9.77,
-          "kmh": 35
+          "ms": 2.06,
+          "kmh": 7
         },
-        "sunrise": "07:01",
-        "sunset": "17:27",
+        "sunrise": "05:26",
+        "sunset": "20:47",
         "current": {
-          "temp": 12,
-          "feelsLike": 12
+          "temp": 21,
+          "feelsLike": 21,
+          "desc": "few clouds",
+          "icon": "http://openweathermap.org/img/wn/02n@2x.png",
+          "humidity": 77
         },
         "forecast": [
           {
-            "time": "15",
-            "temp": 11,
-            "desc": "light rain",
-            "icon": "http://openweathermap.org/img/wn/10d@2x.png"
+            "time": "01",
+            "temp": 20,
+            "desc": "few clouds",
+            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
           },
           {
-            "time": "18",
-            "temp": 9,
+            "time": "04",
+            "temp": 17,
             "desc": "broken clouds",
             "icon": "http://openweathermap.org/img/wn/04n@2x.png"
           },
           {
-            "time": "21",
-            "temp": 6,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+            "time": "07",
+            "temp": 15,
+            "desc": "broken clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
           },
           {
-            "time": "00",
-            "temp": 5,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+            "time": "10",
+            "temp": 20,
+            "desc": "broken clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
           },
           {
-            "time": "03",
-            "temp": 4,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+            "time": "13",
+            "temp": 23,
+            "desc": "broken clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
           },
-
+          {
+            "time": "16",
+            "temp": 24,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
+          },
+          {
+            "time": "19",
+            "temp": 22,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
+          }
         ]
+
       }
     }
   },
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const weather = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/weather3')).json());
+        const weather = (await (await fetch('https://mhs-backend.herokuapp.com/weather3')).json());
         this.polledData = weather
 
 
       }, 60000)
     }, pullData() {
       axios
-          .get('https://fathomless-crag-41517.herokuapp.com/weather3')
+          .get('https://mhs-backend.herokuapp.com/weather3')
           .then(response => (this.polledData = response.data))
     }
   },
@@ -187,7 +202,6 @@ export default {
     this.pollData()
   }
 }
-
 
 </script>
 
