@@ -36,7 +36,7 @@
       <side-bar class="side-bar"></side-bar>
       <div class="grid-container">
         <dateTime></dateTime>
-<!--        <div class="page-divider"></div>-->
+  
 
 <!--        <div class="img-container"><img src="@/assets/Mill_Hill_School_Coat_of_Arms_(2017).png"></div>-->
         <department-notices></department-notices>

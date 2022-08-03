@@ -24,7 +24,7 @@
       <div class="widget-rotation">
              <ul>
                <li style="opacity: 0.5"><ion-icon name="alert-outline"></ion-icon>&nbsp;&nbsp;&nbsp;MHS Notices</li>
-               <li><span><ion-icon name="fast-food-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;lunch</li>
+               <li><span><ion-icon  name="cloudy-night-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;weather</li>
                <li style="opacity: 0.5"><ion-icon name="car-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Bus</li>
                <li style="opacity: 0.5"><ion-icon name="videocam-outline"></ion-icon>&nbsp;&nbsp;&nbsp;School Video</li>
              </ul>

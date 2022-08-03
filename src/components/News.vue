@@ -103,9 +103,9 @@ export default {
 .triangle1 {
   width: 0;
   height: 0;
-  border-left: 1.75vh solid transparent;
-  border-right: 1.75vh solid transparent;
-  border-bottom: 2.5vh solid #3AB0FF;
+  border-left: 1.25vh solid transparent;
+  border-right: 1.25vh solid transparent;
+  border-bottom: 2vh solid #3AB0FF;
   grid-row: 1/2;
   grid-column: 15/16;
   transform: rotate(70deg);
