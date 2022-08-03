@@ -253,7 +253,7 @@ export default {
 
 .widget-rotation ul li:nth-child(2){
   border-radius: 10vh;
-  background-color: #fbf8f5;
+  background-color: #F9F2ED;
   border: 4px solid #e0d8d8;
   box-shadow: 0.1vh 0.1vh 1vh 1vh #fbf8f5;
 }

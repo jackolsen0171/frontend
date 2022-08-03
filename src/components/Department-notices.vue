@@ -171,7 +171,7 @@ export default {
   width: 8vw;
   text-align: center;
   border-radius: 10vh;
-  background-color: #F9F2ED;;
+  background-color: #F9F2ED;
   border: 1px solid #e0d8d8;
   box-shadow: 0.1vh 0.1vh 1vh 1vh #fbf8f5;
 }
@@ -195,13 +195,13 @@ export default {
 }
 
 .notice1{
-  border-left: 2px solid rgba(255, 181, 98,0.7);
+  /*border-left: 2px solid rgba(255, 181, 98,0.7);*/
   border-right: 2px solid rgba(255, 181, 98,0.7);
 }
 
 .notice2{
   border-left: 2px solid rgba(248, 116, 116,0.7);
-  border-right: 2px solid rgba(248, 116, 116,0.7);
+  /*border-right: 2px solid rgba(248, 116, 116,0.7);*/
 }
 
 </style>
