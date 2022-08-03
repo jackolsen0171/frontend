@@ -1,5 +1,17 @@
 <template>
   <div class='department-notices'>
+    <div class="title">Department Notices <ion-icon style="position: relative;top: 0.6vh" name="alert-outline"></ion-icon></div>
+    <div class="teacher-rotation">
+      <p style="opacity: 0.5" >Mr Olsen</p>
+      <p style="opacity: 0.5">Mr Gal</p>
+      <p>Dr Mookle</p>
+    </div>
+    <div class="notices">
+      <div class="notice1">Hi Students. Myself, Mookle 420 won't be able to attend todays lesson. You will have Mr Raj as a cover.</div>
+      <div class="notice2">Nothing to see here!</div>
+<!--          <img class='notice1' src="@/assets/sticky-note.png" alt="loading....">-->
+<!--          <img class='notice2' src="@/assets/sticky-note.png" alt="loading....">-->
+    </div>
 <!--    <img class='notice1' src="@/assets/sticky-note.png" alt="loading....">-->
 <!--    <img class='notice2' src="@/assets/sticky-note.png" alt="loading....">-->
     <!--    <img src="@/assets/Mill_Hill_School_Coat_of_Arms_(2017).png">-->
@@ -109,182 +121,87 @@ export default {
 
 <style scoped>
 .department-notices {
-  grid-column: 2/31;
-  grid-row: 15/23;
-  background-color: #F9F2ED;
-  border: 2px solid #e0d8d8;
+  /*grid-column: 14/31;*/
+  grid-row: 15/31;
+  grid-column: 2/19;
+  /*background-color: #F9F2ED;*/
+  border-radius: 2vh;
+  border-left: 2px solid #e0d8d8;
+  border-right: 2px solid #e0d8d8;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
 }
 
+.title{
+  font-size: 4vh;
+  grid-row: 1/3;
+  grid-column: 1/13;
+  font-weight: 300;
+  position: relative;
+  left: 1vw;
+  top: 2vh;
+}
 
-.notices > div {
-  width:25vw;
-  height: 22vh;
-  color: white;
-  font-family: "Poppins", sans-serif;
+.teacher-rotation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-row: 4/7;
+  grid-column: 1/11;
+  position: relative;
+  left: 1vw;
+  font-size: 2.5vh;
+  font-weight: 600;
+}
+
+/*.teacher-rotation p:nth-child(3)::after{*/
+/*  content: '';*/
+/*  width: 4vw;*/
+/*  height: 0.3vh;*/
+/*  background-color: #3AB0FF;*/
+/*  position: absolute;*/
+/*  top:3.2vh;*/
+/*  left: 33.5vh;*/
+/*}*/
+
+.teacher-rotation p:nth-child(3){
+  height: 4vh;
+  width: 8vw;
+  text-align: center;
+  border-radius: 10vh;
   background-color: #F9F2ED;
-  border: 2px solid #e0d8d8;
+  border: 1px solid #e0d8d8;
+  box-shadow: 0.1vh 0.1vh 1vh 1vh #fbf8f5;
+}
+
+.notices{
+  grid-column: 1/16;
+  grid-row: 6/16;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
+}
+
+.notices > div{
+  width: 17vw;
+  height: 30vh;
+  border-radius: 2vh;
+  padding: 2vh;
+  font-size: 2vh;
 }
 
 .notice1{
-  transform: rotate(-5.75deg);
+  /*border-left: 2px solid rgba(255, 181, 98,0.7);*/
+  border-right: 2px solid rgba(255, 181, 98,0.7);
 }
 
 .notice2{
-  position: relative;
-  left: 17.5vw;
-  bottom: 29vh;
-  transform: rotate(-5.75deg);
+  border-left: 2px solid rgba(248, 116, 116,0.7);
+  /*border-right: 2px solid rgba(248, 116, 116,0.7);*/
 }
-
-
-/*.teacher-rotation{*/
-/*  !*border: 2px solid #e0d8d8;*!*/
-/*  width: 25vw;*/
-/*  height: 20vh;*/
-/*  !*background-color: #F9F2ED;*!*/
-/*  !*background-color: white;*!*/
-/*  !*z-index: 1;*!*/
-/*  border-radius: 2vh;*/
-/*  position: relative;*/
-/*  display: grid;*/
-/*  grid-template-columns: repeat(10,1fr);*/
-/*  grid-template-rows: repeat(10,1fr);*/
-/*  !*left: -1vw;*!*/
-/*}*/
-/*.title{*/
-/*  font-family: "Poppins", sans-serif;*/
-/*  font-size: 4.5vh;*/
-/*  font-weight: 600;*/
-/*  grid-column: 1/11;*/
-/*  grid-row: 1/2;*/
-
-
-/*}*/
-
-/*.teachers{*/
-/*  display: flex;*/
-/*  flex-direction: row;*/
-/*  justify-content: space-between;*/
-/*  font-family: "Poppins", sans-serif;*/
-/*  font-size: 2.3vh;*/
-/*  grid-column: 1/11;*/
-/*  grid-row: 3/4;*/
-/*  font-weight: 600;*/
-/*}*/
-
-
-
-/*.teachers p::after{*/
-/*  content: '';*/
-/*  position: absolute;*/
-/*  top: 11.5vh;*/
-/*  left: 19vw;*/
-/*  width: 4vw;*/
-/*  height: 0.25vh;*/
-/*  background: #3AB0FF;*/
-/*}*/
-
-/*.teachers div{*/
-/*  opacity: 0.5;*/
-/*}*/
-
-
-/*.main-notice-title ion-icon{*/
-/*  color: red;*/
-/*  font-size: 5vh;*/
-/*  position: absolute;*/
-/*  top: 1.5vh;*/
-/*  left: 0.5vw;*/
-
-/*}*/
-
-/*.notices-container{*/
-/*  grid-row: 2/11;*/
-/*  width: 33vw;*/
-/*  font-family: "Poppins", sans-serif;*/
-/*  position: relative;*/
-/*  bottom: 6vh;*/
-/*  display: flex;*/
-/*  flex-direction: row;*/
-/*  justify-content: space-between;*/
-/*  font-size: 2vh;*/
-/*  !*border: 2px solid red;*!*/
-/*}*/
-
-
-/*.notices-container div{*/
-/*  width: 15vw;*/
-/*}*/
-
-
-
-/*!*.triangles{*!*/
-/*!*  opacity: 0.7;*!*/
-/*!*}*!*/
-
-/*!*.triangle1 {*!*/
-/*!*  width: 0;*!*/
-/*!*  height: 0;*!*/
-/*!*  border-left: 0.75vh solid transparent;*!*/
-/*!*  border-right: 0.75vh solid transparent;*!*/
-/*!*  border-bottom: 1.5vh solid #3AB0FF;*!*/
-/*!*  position: absolute;*!*/
-/*!*  left:33vw;*!*/
-/*!*  top: 54vh;*!*/
-/*!*  transform: rotate(-45deg);*!*/
-/*!*}*!*/
-
-/*!*.triangle2 {*!*/
-/*!*  width: 0;*!*/
-/*!*  height: 0;*!*/
-/*!*  border-left: 0.75vh solid transparent;*!*/
-/*!*  border-right: 0.75vh solid transparent;*!*/
-/*!*  border-bottom: 1.5vh solid #FFB562;*!*/
-/*!*  position: absolute;*!*/
-/*!*  left:1vw;*!*/
-/*!*  top: 54vh;*!*/
-/*!*  transform: rotate(-346deg);*!*/
-/*!*}*!*/
-
-
-/*!*.triangle3 {*!*/
-/*!*  width: 0;*!*/
-/*!*  height: 0;*!*/
-/*!*  border-left: 0.75vh solid transparent;*!*/
-/*!*  border-right: 0.75vh solid transparent;*!*/
-/*!*  border-bottom: 1.5vh solid #F87474;*!*/
-/*!*  position: absolute;*!*/
-/*!*  left:32vw;*!*/
-/*!*  top: 4vh;*!*/
-/*!*  transform: rotate(70deg);*!*/
-
-
-/*!*}*!*/
-
-/*.cork-board{*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  position: absolute;*/
-/*  border-radius: 2vh;*/
-/*  opacity: 0.8;*/
-/*  filter: blur(0.1vh);*/
-/*}*/
-
-/*.sticky-note{*/
-/*  z-index: 1;*/
-/*  position: absolute;*/
-/*  top: 4vh;*/
-/*  left: 0.5vw;*/
-/*  transform: rotate(-5.9deg);*/
-/*}*/
-
-/*.sticky-note2{*/
-/*  z-index: 1;*/
-/*  position: absolute;*/
-/*  top: 4vh;*/
-/*  left: 17.5vw;*/
-/*  transform: rotate(-5.9deg);*/
-/*}*/
-
 
 </style>

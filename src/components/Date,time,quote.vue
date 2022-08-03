@@ -170,6 +170,18 @@ export default {
 
 }
 
+/*.DateTime::after{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 45vh;*/
+/*  left: 0vw;*/
+/*  box-shadow: 0 0 0.1vh 0.4vh #FFB562, 0 0 0.1vh 0.8vh #3AB0FF;*/
+/*  width: 100vw;*/
+/*  height: 0.5vh;*/
+/*  border-radius: 2vh;*/
+
+/*}*/
+
 
 .time-main{
   font-size: 10vh;

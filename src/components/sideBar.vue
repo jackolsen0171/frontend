@@ -24,7 +24,7 @@
       <div class="widget-rotation">
              <ul>
                <li style="opacity: 0.5"><ion-icon name="alert-outline"></ion-icon>&nbsp;&nbsp;&nbsp;MHS Notices</li>
-               <li><span><ion-icon name="fast-food-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;lunch</li>
+               <li><span><ion-icon  name="cloudy-night-outline"></ion-icon></span>&nbsp;&nbsp;&nbsp;weather</li>
                <li style="opacity: 0.5"><ion-icon name="car-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Bus</li>
                <li style="opacity: 0.5"><ion-icon name="videocam-outline"></ion-icon>&nbsp;&nbsp;&nbsp;School Video</li>
              </ul>
@@ -279,7 +279,7 @@ export default {
 
 .widget-rotation ul li:nth-child(2){
   border-radius: 10vh;
-  background-color: #fbf8f5;
+  background-color: #F9F2ED;
   border: 4px solid #e0d8d8;
   box-shadow: 0.1vh 0.1vh 1vh 1vh #fbf8f5;
 }
