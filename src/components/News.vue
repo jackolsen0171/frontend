@@ -4,8 +4,8 @@
       <div class="triangle2"></div>
       <div class="triangle3"></div>
       <div class="title">Daily News&nbsp;<ion-icon style="position: relative;top: 0.5vh" name="newspaper-outline"></ion-icon></div>
-      <div class="headline">Rishi Sunak vows to take 4p off income tax</div>
-      <div class="news-data">Rishi Sunak has said he will cut the basic rate of income tax from 20% to 16% by the end of the next parliament if he becomes prime minister.</div>
+      <div class="headline">{{ polledData[startNum].title }}</div>
+      <div class="news-data">{{ polledData[startNum].description }}</div>
   </div>
 </template>
 
@@ -16,11 +16,6 @@ export default {
   name: "Department-notices",
   data() {
     return {
-      days: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
-      months: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
-      day: "day...",
-      date: "number...",
-      month: "month...",
       polling: null,
       startNum: 0,
       polledData: ['loading...', 'loading...', 'loading...'],
@@ -29,23 +24,19 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const news = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/news-db')).json());
+        const news = (await (await fetch('https://mhs-backend.herokuapp.com/news-db')).json());
         this.polledData = news
         this.startNum >= this.polledData.length ? this.startNum = 0 : this.startNum+=1
       }, 10000)
     },
     pullData() {
       axios
-          .get('https://fathomless-crag-41517.herokuapp.com/news-db')
+          .get('https://mhs-backend.herokuapp.com/news-db')
           .then(response => (this.polledData = response.data))
     }
   },
   mounted() {
     this.pullData()
-    const date = new Date()
-    this.day = this.days[date.getDay()]
-    this.date = date.getDate()
-    this.month = this.months[date.getMonth()]
   },
   beforeDestroy() {
     clearInterval(this.polling)
@@ -89,6 +80,7 @@ export default {
   grid-column: 1/15;
   font-weight: 200;
   font-size: 4vh;
+
 }
 
 .news-data{

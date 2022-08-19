@@ -1,5 +1,5 @@
 {
-  "name": "displayv3",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -42,5 +42,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoelgal/frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoelgal/frontend/issues"
+  },
+  "homepage": "https://github.com/yoelgal/frontend#readme"
 }
