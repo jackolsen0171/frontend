@@ -91,7 +91,7 @@ export default {
 
 :root{
   --color1: #1b1c1f;
-  /*--color2: #272930;*/
+  --color2: #272930;
   --color3: #2666CF;
   --color4: #F5F2E7;
   --color5: #F5F2E7;
@@ -116,7 +116,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--color6);
+  background-color: var(--color2);
   width: 100vw;
   height: 100vh;
 }
