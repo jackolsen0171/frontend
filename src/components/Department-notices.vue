@@ -7,8 +7,8 @@
       <p>Dr Mookle</p>
     </div>
     <div class="notices">
-      <div class="notice1">Hi Students. Myself, Mookle 420 won't be able to attend todays lesson. You will have Mr Raj as a cover.</div>
-      <div class="notice2">Nothing to see here!</div>
+      <li class="notice1">Hi Students. Myself, Mookle 420 won't be able to attend todays lesson. You will have Mr Raj as a cover.</li>
+      <li class="notice2">Nothing to see here!</li>
 <!--          <img class='notice1' src="@/assets/sticky-note.png" alt="loading....">-->
 <!--          <img class='notice2' src="@/assets/sticky-note.png" alt="loading....">-->
     </div>
@@ -121,24 +121,26 @@ export default {
 
 <style scoped>
 .department-notices {
-  /*grid-column: 14/31;*/
-  grid-row: 15/31;
-  grid-column: 2/19;
-  /*background-color: #F9F2ED;*/
+  /*border: var(--borderWidth) solid var(--color5);*/
+  /*background: var(--color2);*/
   border-radius: 2vh;
-  border-left: 2px solid #e0d8d8;
-  border-right: 2px solid #e0d8d8;
+  grid-column: 17/31;
+  grid-row: 15/31;
   font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(15, 1fr);
+  border-left: var(--borderWidth) solid var(--color5);
+  border-right: var(--borderWidth) solid var(--color5);
+
+
 }
 
 .title{
-  font-size: 4vh;
+  font-size: 4.4vh;
   grid-row: 1/3;
-  grid-column: 1/13;
-  font-weight: 300;
+  grid-column: 1/17;
+  font-weight: 200;
   position: relative;
   left: 1vw;
   top: 2vh;
@@ -148,23 +150,14 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  grid-row: 4/7;
-  grid-column: 1/11;
+  grid-row: 5/7;
+  grid-column: 1/15;
   position: relative;
   left: 1vw;
   font-size: 2.5vh;
-  font-weight: 600;
+  font-weight: 200;
 }
 
-/*.teacher-rotation p:nth-child(3)::after{*/
-/*  content: '';*/
-/*  width: 4vw;*/
-/*  height: 0.3vh;*/
-/*  background-color: #3AB0FF;*/
-/*  position: absolute;*/
-/*  top:3.2vh;*/
-/*  left: 33.5vh;*/
-/*}*/
 
 .teacher-rotation p:nth-child(3){
   height: 4vh;
@@ -172,36 +165,48 @@ export default {
   text-align: center;
   border-radius: 10vh;
   background-color: #F9F2ED;
-  border: 1px solid #e0d8d8;
-  box-shadow: 0.1vh 0.1vh 1vh 1vh #fbf8f5;
+  color: var(--color1);
 }
 
 .notices{
   grid-column: 1/16;
-  grid-row: 6/16;
+  grid-row: 7/16;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 
 
+
 }
 
-.notices > div{
+.notices > li{
   width: 17vw;
-  height: 30vh;
-  border-radius: 2vh;
-  padding: 2vh;
+  height:90%;
+  border-radius: 0.5vh;
+  padding: 1vh;
   font-size: 2vh;
+  list-style: none;
+  position: relative;
+  left: 0.5vw;
+  font-weight: 100;
 }
 
-.notice1{
-  /*border-left: 2px solid rgba(255, 181, 98,0.7);*/
-  border-right: 2px solid rgba(255, 181, 98,0.7);
+.notices > li::before{
+  content: "\2022";
+  color: var(--color3);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
 }
 
-.notice2{
-  border-left: 2px solid rgba(248, 116, 116,0.7);
-  /*border-right: 2px solid rgba(248, 116, 116,0.7);*/
-}
+/*.notice1{*/
+/*  !*border-left: 2px solid rgba(255, 181, 98,0.7);*!*/
+/*  border-right: 2px solid var(--color3);*/
+/*}*/
+
+/*.notice2{*/
+/*  border-left: 2px solid var(--color3);*/
+/*  !*border-right: 2px solid rgba(248, 116, 116,0.7);*!*/
+/*}*/
 
 </style>

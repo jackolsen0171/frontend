@@ -1,14 +1,15 @@
 <template>
   <div class="DateTime">
     <div class="time-main">
-      <div>{{ localHr }}<span style="color: #F87474">:</span>{{ mins }}<span style="color: #F87474" >:</span>{{ secs }}</div>
+      <div>{{ localHr }}<span style="color: var(--color3)">:</span>{{ mins }}<span style="color: var(--color3)" >:</span>{{ secs }}</div>
     </div>
     <div class="date-main">
       <div>{{ day }} {{ date }} {{ month }}</div>
     </div>
-    <div class="img-container"></div>
 <!--    <img src="@/assets/Mill_Hill_School_Coat_of_Arms_(2017).png">-->
-    <em class="motto">et virtutem et musas</em>
+    <em class="motto">
+      <div>et virtutem et musas</div>
+    </em>
     <em class="motto-translation">instilling values, inspiring minds.</em>
   </div>
 <!--    <div class="date-overlay1 border-blue-shadow">-->
@@ -161,61 +162,56 @@ export default {
 
 
 .DateTime {
-  grid-column: 2/14;
-  grid-row: 1/14;
+  grid-column: 17/31;
+  grid-row: 1/15;
   border-radius: 2vh;
   font-family: 'Poppins', sans-serif;
-  border-left: 2px solid #e0d8d8;
-  border-right: 2px solid #e0d8d8;
+  border-left: var(--borderWidth) solid var(--color5);
+  border-right: var(--borderWidth) solid var(--color5);
+  /*background: var(--color2);*/
 
 }
 
-/*.DateTime::after{*/
-/*  content: '';*/
-/*  position: absolute;*/
-/*  top: 45vh;*/
-/*  left: 0vw;*/
-/*  box-shadow: 0 0 0.1vh 0.4vh #FFB562, 0 0 0.1vh 0.8vh #3AB0FF;*/
-/*  width: 100vw;*/
-/*  height: 0.5vh;*/
-/*  border-radius: 2vh;*/
-
-/*}*/
 
 
 .time-main{
-  font-size: 10vh;
-  font-weight: 500;
+  font-size: 12vh;
+  font-weight: 200;
   text-align: center;
-  position: relative;
-  bottom: 2vh;
   opacity: 0.9;
+  letter-spacing: 0.5vh;
 }
 
 .date-main{
   font-size: 5vh;
-  font-weight: 500;
+  font-weight: 200;
   position: relative;
-  bottom: 4vh;
+  bottom: 2vh;
   opacity: 0.8;
   text-align: center;
 }
 
 .motto{
-  font-size: 2.8vh;
-  position: relative;
-  left: 5vw;
-  bottom: 3vh;
-  font-weight: 400;
-  opacity: 0.8;
-}
-.motto-translation{
-  font-weight: 600;
   font-size: 3vh;
+  font-weight: 100;
+  opacity: 0.8;
+  text-align: center;
+  position: relative;
+  bottom: 2vh;
+
+}
+
+
+
+.motto-translation{
+  font-weight: 200;
+  font-size: 4vh;
   display: block;
   text-align: center;
   position: relative;
-  bottom: 3vh;
+  bottom: 2vh;
+
+
 }
 
 

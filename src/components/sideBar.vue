@@ -3,14 +3,15 @@
 <!--    <div class="img-container"><img src="@/assets/Mill_Hill_School_Coat_of_Arms_(2017).png"></div>-->
     <div class="department-name">Physics&nbsp;🔭</div>
     <div class="desc">information dashboard</div>
-    <hr style="border: 1px solid rgba(0,0,0,0.6);position: relative;left: 1.5vw;bottom:1.5vh;width: 20.5vw">
+<!--    <hr style="border: 1px solid rgba(255,255,255,0.6);position: relative;left: 1.5vw;bottom:1.5vh;width: 20.5vw">-->
+    <div class="line"></div>
     <div class="side-bar-period">
       <p style="width: 10vw">Period 4<span>12:10 → 12:50</span></p>
       <div class="period-squares">
         <div></div>
         <div></div>
         <div></div>
-        <div style="background-color: #F87474;"></div>
+        <div style="background-color: var(--color3);"></div>
         <div></div>
         <div></div>
         <div></div>
@@ -122,8 +123,8 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: white;
-  border: 2px solid #e0d8d8;
+  background: var(--color1);
+  color: white;
 
 
 
@@ -134,8 +135,7 @@ export default {
 .department-name{
   font-family: "Poppins", sans-serif;
   font-size: 8vh;
-  color: black;
-  font-weight: 600;
+  font-weight: 200;
   padding: 3vh;
   width: 30vw;
 
@@ -147,15 +147,23 @@ export default {
   display: block;
   width: 30vw;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 200;
   position: relative;
   left: 1.75vw;
   bottom: 2vh;
-  opacity: 0.8;
+}
+
+.line{
+  width: 80%;
+  position: relative;
+  left: 1.6vw;
+  height: 0.3vh;
+  background: var(--color4);
+  box-shadow: 0 0.7vh 0.1vh var(--color3);
 }
 
 .side-bar-period{
-  font-weight: 500;
+  font-weight: 200;
   padding: 0 0 0 3vh;
   font-size: 3vh;
   position: relative;
@@ -184,7 +192,7 @@ export default {
 
 .period-squares > div{
   background-color: #F9F2ED;
-  border: 2px solid #e0d8d8;
+  border: 2px solid var(--color1);
   border-radius: 0.5vh;
   width: 2vw;
   height: 3.5vh;
@@ -200,14 +208,13 @@ export default {
 
 
 .side-bar-overlay {
-  background: white;
+  background: var(--color1);
   border-radius: 7vh;
   position: relative;
   top:18vh;
-  right: 0.15vw;
   height:100vh;
   width: 25vw;
-  box-shadow: 0 0 0.1vh 0.6vh #FFB562, 0 0 0.1vh 1.2vh #3AB0FF;
+  box-shadow: 0 0 0.1vh 0.6vh var(--color4),0 0 0.1vh 1.2vh var(--color3);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -225,7 +232,8 @@ export default {
   align-items: center;
   flex-direction: column;
   border-radius: 2vh;
-  background: #ffffff;
+  background: var(--color1);
+  /*color: var(--color);*/
   /*box-shadow: inset 0.1vh 0.1vh 1vh #a098a9,inset -0.1vh -0.1vh 1vh #a098a9;*/
 }
 
@@ -248,19 +256,19 @@ export default {
   align-items: center;
   width: 15vw;
   padding-left: 1vw;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .widget-rotation ul li:nth-child(2){
   border-radius: 10vh;
-  background-color: #F9F2ED;
-  border: 4px solid #e0d8d8;
-  box-shadow: 0.1vh 0.1vh 1vh 1vh #fbf8f5;
+  background-color: var(--color2);
+  color: var(--color4);
+  border: 0.4vh solid var(--color4);
+  box-shadow: 0 0 1vh 0.1vh var(--color3);
 }
 
 .widget-rotation ul li span{
   padding-top: 0.5vh;
-  color: #F87474;
 }
 
 

@@ -80,52 +80,47 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Kanit:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
 
+/*1 is background
+2 is widget colour
+3 is extra colour
+4 is white
+5 is border colour*/
+
+
+
+
+:root{
+  --color1: #1b1c1f;
+  /*--color2: #272930;*/
+  --color3: #2666CF;
+  --color4: #F5F2E7;
+  --color5: #F5F2E7;
+  --borderWidth: 0.2vh;
+}
+
+
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-
-
-
-
-
 }
 
-#app {
-  /*
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  */
-}
+
 
 .bg-main{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /*background-color: #272748;*/
-  background-color: #F9F2ED;
+  background-color: var(--color6);
   width: 100vw;
   height: 100vh;
 }
 
-.bg-main::before{
-  /*content: '';*/
-  /*position: absolute;*/
-  /*top: 0;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*bottom: 0;*/
-  /*box-shadow: inset 0 0 4vh rgba(255, 255, 255, 0.5);*/
-  /*filter: blur(3vh);*/
-  /*background: linear-gradient( to bottom,#af0808, #9a609a);*/
-  /*opacity: 0.5;*/
-  /*clip-path: circle(30% at right 70%);*/
-}
 
 
 
@@ -136,37 +131,34 @@ export default {
   left: 0.75vw;
   border-radius: 2vh;
   z-index:1;
+  border: var(--borderWidth) solid #333b40;
+
+
 }
 
 
 
 .grid-container {
+  border: var(--borderWidth) solid #333b40;
   width: 70vw;
   height: 95vh;
   display: grid;
   grid-template-columns: repeat(30, 1fr);
   grid-template-rows: repeat(30, 1fr);
-  gap: 2.5vh;
+  gap: 3vh;
   padding: 3vh;
   border-radius: 2vh;
-  background: white;
-  border: 2px solid #e0d8d8;
+  background: var(--color1);
   overflow: hidden;
-
-}
-
-
-
-
-.widget {
-  z-index: 1;
-  border-radius: 2vh;
-  backdrop-filter: blur(0.5vh);
-  border: 2px solid #e0d8d8;
-  background-color: #F9F2ED;
+  color: var(--color4);
 
 
 }
+
+
+
+
+
 
 .ring-binders{
   width: 5vw;
@@ -181,13 +173,13 @@ export default {
 }
 
 .ring-binders > div{
-  border: 0.2vh solid black;
+  border: 0.2vh solid var(--color4);
   width: 4.5vw;
   height: 1.5vh;
   border-radius: 50%;
   border-bottom: transparent;
-  opacity: 0.7;
-  filter: blur(0.1vh);
+  /*opacity: 0.7;*/
+  /*filter: blur(0.1vh);*/
 
 
 }
@@ -205,12 +197,12 @@ export default {
 }
 
 .ring-binders2 > div{
-  border: 0.2vh solid grey;
+  border: 0.2vh solid var(--color3);
   width: 0.5vw;
   height: 1vh;
   border-radius: 50%;
-  opacity: 0.7;
-  filter: blur(0.1vh);
+  /*opacity: 0.7;*/
+  /*filter: blur(0.1vh);*/
 
 
 }
@@ -228,27 +220,15 @@ export default {
 }
 
 .ring-binders3 > div{
-  border: 0.2vh solid grey;
+  border: 0.2vh solid var(--color3);
   width: 0.5vw;
   height: 1vh;
   border-radius: 50%;
-  opacity: 0.7;
-  filter: blur(0.1vh);
+  /*opacity: 0.7;*/
+  /*filter: blur(0.1vh);*/
 }
 
-.page-divider{
-  /*width: 3vw;*/
-  /*height: 5vh;*/
-  width: 70vw;
-  height: 100vh;
-  grid-row: 17/31;
-  grid-column: 1/31;
-  position: relative;
-  top: 1.65vh;
-  right: 1.75vw;
-  border-radius:7vh;
-  /*box-shadow: 0 0 0.1vh 0.6vh #FFB562, 0 0 0.1vh 1.2vh #3AB0FF;*/
-}
+
 
 
 </style>
